@@ -1,6 +1,5 @@
 package com.example.newsapp.adapters
 
-import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -8,11 +7,11 @@ import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.example.newsapp.R
-import com.example.newsapp.activities.ArticleDetails
+import com.example.newsapp.activities.ArticleDetailsActivity
 import com.example.newsapp.models.Article
 import kotlinx.android.synthetic.main.layout_item_news.view.*
 
-class EverythingAdapter(private val context: Context) :
+class EverythingAdapter :
     PagingDataAdapter<Article, EverythingAdapter.EverythingViewHolder>(DataDifferentiator) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = EverythingViewHolder(
@@ -29,7 +28,7 @@ class EverythingAdapter(private val context: Context) :
         fun bindPlan(article: Article) {
             itemView.article_title.text = article.title
             itemView.article_title.setOnClickListener {
-                ArticleDetails.start(context, article)
+                ArticleDetailsActivity.start(itemView.context, article)
             }
         }
     }

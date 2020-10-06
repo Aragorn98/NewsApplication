@@ -14,7 +14,7 @@ import kotlinx.android.synthetic.main.activity_bookmarks.*
 import org.koin.android.viewmodel.ext.android.viewModel
 import org.koin.core.qualifier.named
 
-class Bookmarks : AppCompatActivity() {
+class BookmarksActivity : AppCompatActivity() {
 
     private var type = "local"
     private val newsViewModel: NewsViewModel by viewModel(named(type))
@@ -49,7 +49,7 @@ class Bookmarks : AppCompatActivity() {
 
     private fun setBookmarks(bookmarks: List<Article>) {
         bookmarksList.layoutManager = LinearLayoutManager(this)
-        val adapter = BookmarksAdapter(bookmarks, this)
+        val adapter = BookmarksAdapter(bookmarks)
         bookmarksList.adapter = adapter
     }
 

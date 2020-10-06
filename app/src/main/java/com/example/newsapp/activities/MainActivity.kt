@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun initUI() {
         bookmarks.setOnClickListener {
-            startActivity(Intent(this, Bookmarks::class.java))
+            startActivity(Intent(this, BookmarksActivity::class.java))
         }
         val sectionsPagerAdapter = SectionsPagerAdapter(this, supportFragmentManager)
         newsViewPager.adapter = sectionsPagerAdapter

@@ -10,19 +10,18 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.newsapp.R
 import com.example.newsapp.models.Article
 import com.example.newsapp.viewModels.NewsViewModel
-import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.activity_article_details.*
 import org.koin.android.viewmodel.ext.android.viewModel
 import org.koin.core.qualifier.named
 
 
-class ArticleDetails : AppCompatActivity() {
+class ArticleDetailsActivity : AppCompatActivity() {
 
     companion object {
         lateinit var article: Article
         fun start(context: Context, article: Article) {
             this.article = article
-            context.startActivity(Intent(context, ArticleDetails::class.java))
+            context.startActivity(Intent(context, ArticleDetailsActivity::class.java))
         }
     }
     var type = "local"

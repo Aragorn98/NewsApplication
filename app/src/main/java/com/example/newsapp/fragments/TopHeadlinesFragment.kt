@@ -44,7 +44,7 @@ class TopHeadlinesFragment : Fragment() {
 
     private fun setupTopHeadlinesAdapter() {
         topHeadlinesList.layoutManager = LinearLayoutManager(activity)
-        adapter = TopHeadlinesAdapter(context!!)
+        adapter = TopHeadlinesAdapter()
         topHeadlinesList.adapter = adapter
     }
 

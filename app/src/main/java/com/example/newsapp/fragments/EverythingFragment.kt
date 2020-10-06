@@ -45,7 +45,7 @@ class EverythingFragment : Fragment() {
 
     private fun setupEverythingAdapter() {
         everythingList.layoutManager = LinearLayoutManager(activity)
-        adapter = EverythingAdapter(context!!)
+        adapter = EverythingAdapter()
         everythingList.adapter = adapter
     }
 
